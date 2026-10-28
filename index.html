@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="./" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="مطعم كاسبر - شبح المأكولات السورية. اطلب أونلاين وأكد طلبك مباشرة عبر واتساب." />
+    <title>مطعم كاسبر | شبح المأكولات السورية</title>
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Cairo', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Cairo', system-ui, sans-serif;
+      }
+      /* Custom scrollbars */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #030712;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #0284c7;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #38bdf8;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-[#030712] text-slate-100 antialiased selection:bg-sky-500 selection:text-black">
+    <!-- Header -->
+    <header class="relative z-20 border-b border-sky-500/20 bg-[#050b18]/95 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl flex-col-reverse items-center gap-6 px-4 py-6 sm:px-6 md:flex-row md:justify-between lg:px-8">
+        <!-- Contact card -->
+        <div class="flex w-full flex-col items-center gap-3 rounded-2xl border border-sky-500/30 bg-sky-950/40 px-6 py-4 text-center shadow-[0_0_25px_-5px_rgba(56,189,248,0.4)] md:w-auto md:items-start md:text-right">
+          <span class="text-xs font-semibold tracking-widest text-sky-400">رقم التواصل</span>
+          <a href="tel:01001254381" class="text-lg font-bold text-white transition hover:text-sky-300" dir="ltr">
+            01001254381
+          </a>
+          <div class="flex items-center gap-3 pt-1">
+            <a href="https://wa.me/201001254381" target="_blank" rel="noreferrer" class="flex h-9 w-9 items-center justify-center rounded-full border border-sky-500/40 text-sky-300 transition hover:bg-sky-500/20" title="واتساب">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.33C9.34 7.33 9.03 7.4 8.77 7.68C8.51 7.96 7.78 8.64 7.78 10.04C7.78 11.44 8.8 12.79 8.94 12.98C9.08 13.17 11 16.26 13.97 17.43C16.44 18.4 16.94 18.2 17.48 18.15C18.02 18.1 19.23 17.43 19.48 16.73C19.73 16.03 19.73 15.43 19.66 15.31C19.59 15.19 19.4 15.12 19.11 14.98C18.82 14.84 17.42 14.15 17.16 14.05C16.9 13.95 16.71 13.9 16.52 14.19C16.33 14.48 15.78 15.12 15.61 15.31C15.44 15.5 15.28 15.52 14.99 15.38C14.7 15.24 13.76 14.93 12.65 13.94C11.78 13.17 11.2 12.22 11.03 11.93C10.86 11.64 11.01 11.49 11.16 11.34C11.29 11.21 11.45 11 11.6 10.83C11.75 10.66 11.8 10.54 11.9 10.34C12 10.14 11.95 9.97 11.88 9.83C11.81 9.69 11.24 8.28 11 7.7C10.77 7.14 10.53 7.22 10.36 7.21C10.2 7.2 10.01 7.2 9.82 7.2C9.63 7.2 9.34 7.27 9.53 7.33Z"/>
+              </svg>
+            </a>
+            <span class="flex h-9 w-9 items-center justify-center rounded-full border border-sky-500/40 text-sky-300 transition hover:bg-sky-500/20" title="فيسبوك">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4">
+                <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.16 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.45 2.9h-2.33V22c4.78-.78 8.44-4.94 8.44-9.94Z" />
+              </svg>
+            </span>
+            <span class="flex h-9 w-9 items-center justify-center rounded-full border border-sky-500/40 text-sky-300 transition hover:bg-sky-500/20" title="إنستغرام">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </span>
+            <a href="tel:01001254381" class="flex h-9 w-9 items-center justify-center rounded-full border border-sky-500/40 text-sky-300 transition hover:bg-sky-500/20" title="اتصل بنا">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4">
+                <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1.1l-2.3 2.1Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Title -->
+        <div class="flex flex-col items-center gap-2 text-center md:items-end md:text-right">
+          <span class="text-xs font-bold tracking-[0.3em] text-sky-400">CASPER RESTAURANT</span>
+          <h1 class="text-4xl font-black text-white drop-shadow-[0_0_20px_rgba(56,189,248,0.45)] sm:text-5xl">
+            مطعم كاسبر
+          </h1>
+          <p class="text-lg font-semibold text-sky-300">شبح المأكولات السورية</p>
+          <p class="max-w-sm text-sm text-slate-400">
+            مصنع سيد – شارع السبيل – بجوار سوبر ماركت القدس
+          </p>
+        </div>
+
+        <!-- Logo -->
+        <div class="shrink-0">
+          <img
+            src="images/logo.png"
+            onerror="if(this.src.indexOf('public/')===-1)this.src='public/images/logo.png';"
+            alt="شعار مطعم كاسبر"
+            class="h-24 sm:h-28 w-auto max-w-[240px] rounded-2xl border-2 border-sky-400/40 object-contain bg-[#050b18]/60 p-1.5 shadow-[0_0_35px_-5px_rgba(56,189,248,0.6)]"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative isolate overflow-hidden border-b border-sky-500/20">
+      <img
+        src="images/hero-bg.jpg"
+        onerror="if(this.src.indexOf('public/')===-1)this.src='public/images/hero-bg.jpg';"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover opacity-70"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-[#030712]/40 via-[#030712]/70 to-[#030712]"></div>
+
+      <div class="relative mx-auto flex max-w-7xl flex-col-reverse items-center gap-8 px-4 py-14 sm:px-6 md:flex-row md:py-20 lg:px-8">
+        <div class="flex flex-1 flex-col items-center gap-5 text-center md:items-end md:text-right">
+          <span class="rounded-full border border-sky-400/40 bg-sky-500/10 px-4 py-1 text-xs font-bold tracking-widest text-sky-300">
+            👻 طعم سوري أصيل من قلب الحي
+          </span>
+          <h2 class="text-3xl font-black leading-tight text-white sm:text-4xl md:text-5xl">
+            جوّع واطلب... <span class="text-sky-400">كاسبر هيوصلك</span>
+          </h2>
+          <p class="max-w-xl text-sm text-slate-300 sm:text-base">
+            شاورما سورية، كريبات، برجر، حواوشي ووجبات كومبو طازة كل يوم. اختار
+            طلبك من المنيو وبعتهولنا على الواتساب في ثواني وإحنا نتصرف.
+          </p>
+          <button
+            onclick="scrollToCategory('gharbi-sandwich')"
+            class="mt-2 inline-flex items-center gap-2 rounded-full bg-sky-500 px-7 py-3 text-sm font-bold text-[#021022] shadow-[0_0_25px_-5px_rgba(56,189,248,0.8)] transition hover:scale-105 hover:bg-sky-400 active:scale-95"
+          >
+            🛒 اطلب الآن
+          </button>
+        </div>
+        <div class="flex flex-1 justify-center">
+          <img
+            src="images/hero-food.png"
+            onerror="if(this.src.indexOf('public/')===-1)this.src='public/images/hero-food.png';"
+            alt="أكلات مطعم كاسبر"
+            class="w-64 drop-shadow-[0_0_35px_rgba(56,189,248,0.45)] sm:w-80 md:w-96"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Nav (Sticky) -->
+    <nav id="categoryNav" class="sticky top-0 z-30 border-b border-sky-500/20 bg-[#050b18]/95 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+        <span class="shrink-0 rounded-full border border-sky-500/30 bg-sky-950/60 px-4 py-1.5 text-center text-xs font-bold text-sky-300">
+          جميع الأسعار بالجنيه المصري
+        </span>
+        <div id="categoryButtons" class="flex flex-wrap items-center justify-center gap-2 overflow-x-auto py-1 md:justify-end">
+          <span class="ml-1 hidden text-xs font-bold tracking-widest text-sky-400 md:inline">
+            قائمة الطعام
+          </span>
+          <!-- Dynamic Category buttons injected via JS -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content Grid -->
+    <main class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <div id="menuContainer" class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        <!-- Dynamic Menu sections injected via JS -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-sky-500/20 bg-[#050b18] px-4 py-8 text-center">
+      <div class="mx-auto flex max-w-7xl flex-col items-center gap-3">
+        <p class="text-sm font-bold text-sky-300">مطعم كاسبر – شبح المأكولات السورية</p>
+        <p class="text-xs text-slate-400">مصنع سيد – شارع السبيل – بجوار سوبر ماركت القدس</p>
+        <div class="flex items-center gap-4 text-sm font-bold text-white" dir="ltr">
+          <a href="tel:01001254381" class="hover:text-sky-300 transition">01001254381</a>
+        </div>
+        <p class="mt-2 text-[11px] text-slate-500">
+          © <span id="currentYear"></span> جميع الحقوق محفوظة لمطعم كاسبر 👻
+        </p>
+      </div>
+    </footer>
+
+    <!-- Floating Cart Button -->
+    <button
+      id="floatingCartBtn"
+      onclick="openCartDrawer()"
+      class="fixed bottom-5 left-1/2 z-40 hidden w-[92%] max-w-sm -translate-x-1/2 items-center justify-between gap-3 rounded-full bg-sky-500 px-5 py-3.5 text-[#021022] shadow-[0_10px_35px_-5px_rgba(56,189,248,0.7)] transition hover:scale-[1.02] hover:bg-sky-400 sm:left-auto sm:right-6 sm:translate-x-0"
+      dir="rtl"
+    >
+      <span class="flex items-center gap-2 text-sm font-extrabold">
+        <span id="floatingCartCount" class="flex h-7 w-7 items-center justify-center rounded-full bg-[#021022] text-sky-300">0</span>
+        عرض السلة
+      </span>
+      <span id="floatingCartTotal" class="text-sm font-extrabold">0 جنيه</span>
+    </button>
+
+    <!-- Cart Drawer Modal -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 hidden justify-end" dir="rtl">
+      <!-- Backdrop -->
+      <div class="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity" onclick="closeCartDrawer()"></div>
+      
+      <!-- Drawer Content -->
+      <div class="relative flex h-full w-full max-w-md flex-col bg-[#060e1c] shadow-2xl ring-1 ring-sky-500/20">
+        <!-- Drawer Header -->
+        <div class="flex items-center justify-between border-b border-sky-500/20 px-5 py-4">
+          <h3 id="drawerTitle" class="text-lg font-extrabold text-white">🛒 سلة الطلبات</h3>
+          <button
+            onclick="closeCartDrawer()"
+            class="flex h-8 w-8 items-center justify-center rounded-full bg-sky-500/10 text-sky-300 hover:bg-sky-500/30 transition"
+          >
+            ✕
+          </button>
+        </div>
+
+        <!-- Drawer Body -->
+        <div id="drawerBody" class="flex-1 overflow-y-auto px-5 py-4">
+          <!-- Injected via renderDrawer() -->
+        </div>
+
+        <!-- Drawer Footer -->
+        <div id="drawerFooter" class="border-t border-sky-500/20 bg-[#050b18] px-5 py-4">
+          <!-- Injected via renderDrawer() -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Application Script -->
+    <script>
+      const WHATSAPP_NUMBER = "201001254381";
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // Menu Data
+      const menuData = [
+        {
+          id: "gharbi-sandwich",
+          number: "01",
+          title: "ساندوتشات الغربي",
+          items: [
+            { id: "gs-1", name: "زنجر", price: 60 },
+            { id: "gs-2", name: "استربس", price: 60 },
+            { id: "gs-3", name: "بانية", price: 60 },
+            { id: "gs-4", name: "شيش", price: 65 },
+            { id: "gs-5", name: "برجر فراخ", price: 45 },
+            { id: "gs-6", name: "برجر لحمه", price: 35 },
+            { id: "gs-7", name: "كبدة", price: 35 },
+            { id: "gs-8", name: "سجق إسكندراني", price: 35 },
+          ],
+        },
+        {
+          id: "chicken-crepes",
+          number: "02",
+          title: "كريبات الفراخ",
+          footerNote: "جميع أنواع الفراخ فريش",
+          items: [
+            { id: "cc-1", name: "شاورما فراخ", price: 70 },
+            { id: "cc-2", name: "استربس", price: 70 },
+            { id: "cc-3", name: "زنجر", price: 70 },
+            { id: "cc-4", name: "شيش", price: 75 },
+            { id: "cc-5", name: "بانية", price: 70 },
+            { id: "cc-6", name: "فراخ كرانشي", price: 75 },
+            { id: "cc-7", name: "مكس فراخ", price: 90, note: "شاورما + استربس + كرانشي" },
+          ],
+        },
+        {
+          id: "gharbi-meals",
+          number: "03",
+          title: "وجبات الغربي",
+          footerNote: "يقدم مع جميع الوجبات: مخلل + تومية + بطاطس + عيش",
+          items: [
+            { id: "gm-1", name: "وجبة كريسبي", price: 85 },
+            { id: "gm-2", name: "وجبة زنجر", price: 85 },
+            { id: "gm-3", name: "وجبة شيش طاووق", price: 90 },
+          ],
+        },
+        {
+          id: "family-meals",
+          number: "04",
+          title: "وجبات عائلية",
+          items: [],
+          infoOnly: true,
+          infoText: "وجبات عائلية مميزة جداً بأسعار مخفضة، كلم فريق كاسبر على الواتساب لمعرفة تفاصيل العرض",
+        },
+        {
+          id: "fino-kaiser",
+          number: "05",
+          title: "ساندوتشات الفينو والكيزر",
+          items: [
+            { id: "fk-1", name: "سجق إسكندراني", price: 15 },
+            { id: "fk-2", name: "كبدة إسكندراني", price: 15 },
+            { id: "fk-3", name: "برجر فراخ", price: 30 },
+            { id: "fk-4", name: "برجر لحمة", price: 25 },
+            { id: "fk-5", name: "برجر جبنة", price: 30 },
+            { id: "fk-6", name: "برجر بيض", price: 30 },
+            { id: "fk-7", name: "برجر بيض وجبنة", price: 35 },
+          ],
+        },
+        {
+          id: "meat-crepes",
+          number: "06",
+          title: "كريبات اللحوم",
+          footerNote: "يقدم جميع الكريبات مودزاريلا",
+          items: [
+            { id: "mc-1", name: "سجق", price: 55 },
+            { id: "mc-2", name: "سوسيس", price: 55 },
+            { id: "mc-3", name: "برجر لحمه", price: 55 },
+            { id: "mc-4", name: "لحمة مفروم", price: 70 },
+            { id: "mc-5", name: "ميكس لحوم", price: 90, note: "لحمة + سجق + سوسيس" },
+            { id: "mc-6", name: "ميكس مدخن", price: 100 },
+          ],
+        },
+        {
+          id: "extras",
+          number: "07",
+          title: "إضافات",
+          items: [
+            { id: "ex-1", name: "تومية", price: 15 },
+            { id: "ex-2", name: "بكت بطاطس", price: 20 },
+            { id: "ex-3", name: "مخلل سوري", price: 25 },
+            { id: "ex-4", name: "كلوسلو", price: 25 },
+            { id: "ex-5", name: "رانش", price: 15 },
+            { id: "ex-6", name: "باربكيو", price: 15 },
+          ],
+        },
+        {
+          id: "potato-crepes",
+          number: "08",
+          title: "كريبات البطاطس",
+          items: [
+            { id: "pc-1", name: "كريب بطاطس مودزريلا", price: 45 },
+            { id: "pc-2", name: "كريب بطاطس رانش", price: 50 },
+            { id: "pc-3", name: "كريب بطاطس باربكيو", price: 50 },
+            { id: "pc-4", name: "كريب بطاطس بيج تستي", price: 50 },
+          ],
+        },
+        {
+          id: "economic-meals",
+          number: "09",
+          title: "وجبات اقتصادية",
+          items: [
+            { id: "em-1", name: "٢ قطعة بانية", price: 65 },
+            { id: "em-2", name: "٢ قطعة استربس", price: 65 },
+            { id: "em-3", name: "٢ قطعة برجر", price: 55 },
+            { id: "em-4", name: "وجبة كرسبي ٤ قطع", price: 120 },
+            { id: "em-5", name: "وجبة كبده اسكندراني", price: 80 },
+            { id: "em-6", name: "وجبة سجق اسكندراني", price: 80 },
+            { id: "em-7", name: "وجبة شيش طاووق", price: 90 },
+            { id: "em-8", name: "وجبة استربس ٧ قطع", price: 180 },
+            { id: "em-9", name: "وجبة زنجر عائلي ١٠ قطع", price: 250 },
+          ],
+        },
+        {
+          id: "hawawshy",
+          number: "10",
+          title: "ركن الحواوشي",
+          items: [
+            { id: "hw-1", name: "حواوشي سادة", price: 20 },
+            { id: "hw-2", name: "حواوشي مودزاريلا", price: 30 },
+            { id: "hw-3", name: "حواوشي رومي", price: 30 },
+            { id: "hw-4", name: "حواوشي بسطرمة", price: 40 },
+            { id: "hw-5", name: "حواوشي كاسبر", price: 50 },
+          ],
+        },
+        {
+          id: "syrian-shawarma",
+          number: "11",
+          title: "ساندوتشات شاورما سوري",
+          items: [
+            { id: "ss-1", name: "شاورما فراخ صغير", price: 40 },
+            { id: "ss-2", name: "شاورما فراخ وسط", price: 50 },
+            { id: "ss-3", name: "شاورما فراخ كبير", price: 60 },
+            { id: "ss-4", name: "شاورما فراخ إكسترا", price: 70, note: "مشروم + رانش + مودزريلا" },
+          ],
+        },
+        {
+          id: "syrian-potato",
+          number: "12",
+          title: "ساندوتشات البطاطس السوري",
+          items: [
+            { id: "sp-1", name: "بطاطس صغير", price: 15 },
+            { id: "sp-2", name: "بطاطس مودزريلا وسط", price: 20 },
+            { id: "sp-3", name: "بطاطس مودزريلا كبير", price: 25 },
+            { id: "sp-4", name: "بطاطس شيدر", price: 25 },
+          ],
+        },
+        {
+          id: "combo-meals",
+          number: "13",
+          title: "وجبات الكومبو",
+          footerNote: "يقدم مع جميع الوجبات: عيش سوري + مخلل + تومية + بطاطس",
+          items: [
+            { id: "cm-1", name: "وجبة الهادي", price: 65, note: "١ برجر ساده + ١ بطاطس + ١ سجق + ١ ماكس كولا" },
+            { id: "cm-2", name: "وجبة الجوكر", price: 65, note: "١ بطاطس مودزريلا + ١ سوسيس + ١ كيده + ١ بطاطس + ١ ماكس كولا" },
+            { id: "cm-3", name: "وجبة الحريفة", price: 65, note: "١ حواوشي + ١ كيده + ١ سجق + ١ بطاطس + ١ ماكس كولا" },
+            { id: "cm-4", name: "وجبة الأكيلة", price: 85, note: "١ كريب بطاطس + ١ سجق + ١ بطاطس + ١ ماكس كولا" },
+            { id: "cm-5", name: "وجبة الرايق", price: 110, note: "١ شاورما + ١ برجر لحمه + ١ بطاطس + ١ ماكس كولا" },
+            { id: "cm-6", name: "وجبة كاسبر", price: 120, note: "١ شاورما + ١ كيدة + ١ بطاطس مودزريلا كبير + ١ بطاطس + ١ ماكس كولا" },
+          ],
+        },
+        {
+          id: "arabic-meals",
+          number: "14",
+          title: "وجبات العربي",
+          items: [
+            { id: "am-1", name: "وجبة شاورما فراخ دبل", price: 110, note: "٢ ساندوتش + مخلل + تومية + بطاطس" },
+            { id: "am-2", name: "وجبة شاورما عربي عادي", price: 80, note: "١ ساندوتش + مخلل + تومية + بطاطس" },
+          ],
+        },
+      ];
+
+      // Cart State
+      let cart = {}; // { [id]: { name, price, qty } }
+      let activeCategory = menuData[0]?.id || "gharbi-sandwich";
+      let drawerStep = "cart"; // 'cart' | 'checkout' | 'done'
+      let checkoutData = { name: "", phone: "", address: "", notes: "" };
+      let checkoutErrors = {};
+
+      // Initialize
+      renderCategoryNav();
+      renderMenu();
+      setupObserver();
+
+      function scrollToCategory(id) {
+        const el = document.getElementById(id);
+        if (el) {
+          const y = el.getBoundingClientRect().top + window.scrollY - 110;
+          window.scrollTo({ top: y, behavior: "smooth" });
+          activeCategory = id;
+          updateCategoryNavUI();
+        }
+      }
+
+      function setupObserver() {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                activeCategory = entry.target.id;
+                updateCategoryNavUI();
+              }
+            });
+          },
+          { rootMargin: "-120px 0px -60% 0px", threshold: 0.1 }
+        );
+
+        menuData.forEach((cat) => {
+          const el = document.getElementById(cat.id);
+          if (el) observer.observe(el);
+        });
+      }
+
+      function renderCategoryNav() {
+        const container = document.getElementById("categoryButtons");
+        container.innerHTML = `
+          <span class="ml-1 hidden text-xs font-bold tracking-widest text-sky-400 md:inline">
+            قائمة الطعام
+          </span>
+          ` +
+          menuData
+            .map(
+              (cat) => `
+            <button
+              id="nav-btn-${cat.id}"
+              onclick="scrollToCategory('${cat.id}')"
+              class="whitespace-nowrap rounded-full border px-3 py-1.5 text-xs font-bold transition ${
+                activeCategory === cat.id
+                  ? "border-sky-400 bg-sky-500 text-[#021022]"
+                  : "border-sky-500/30 bg-sky-950/40 text-sky-200 hover:bg-sky-500/20"
+              }"
+            >
+              ${cat.number} · ${cat.title}
+            </button>
+          `
+            )
+            .join("");
+      }
+
+      function updateCategoryNavUI() {
+        menuData.forEach((cat) => {
+          const btn = document.getElementById(`nav-btn-${cat.id}`);
+          if (btn) {
+            if (activeCategory === cat.id) {
+              btn.className = "whitespace-nowrap rounded-full border px-3 py-1.5 text-xs font-bold transition border-sky-400 bg-sky-500 text-[#021022]";
+            } else {
+              btn.className = "whitespace-nowrap rounded-full border px-3 py-1.5 text-xs font-bold transition border-sky-500/30 bg-sky-950/40 text-sky-200 hover:bg-sky-500/20";
+            }
+          }
+        });
+      }
+
+      function renderMenu() {
+        const container = document.getElementById("menuContainer");
+        container.innerHTML = menuData
+          .map((cat) => {
+            if (cat.infoOnly) {
+              const encodedMsg = encodeURIComponent("مرحباً، حابب أعرف تفاصيل عروض الوجبات العائلية في مطعم كاسبر 👻");
+              return `
+                <section id="${cat.id}" class="scroll-mt-32 rounded-2xl border border-amber-400/30 bg-gradient-to-br from-amber-500/10 to-sky-950/30 p-6 shadow-lg">
+                  <div class="flex items-center justify-between gap-2 rounded-t-2xl bg-gradient-to-l from-amber-600/30 to-sky-900/10 px-4 py-3 -m-6 mb-4">
+                    <h3 class="text-base font-extrabold text-white sm:text-lg">${cat.title}</h3>
+                    <span class="flex h-7 w-9 items-center justify-center rounded-md bg-amber-500/20 text-xs font-bold text-amber-300 ring-1 ring-inset ring-amber-500/40">${cat.number}</span>
+                  </div>
+                  <p class="mt-4 text-sm leading-relaxed text-amber-100/90">${cat.infoText}</p>
+                  <a
+                    href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMsg}"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="mt-4 inline-flex items-center gap-2 rounded-full bg-amber-400 px-4 py-2 text-xs font-bold text-[#2a1600] transition hover:bg-amber-300 active:scale-95"
+                  >
+                    تواصل معنا على الواتساب
+                  </a>
+                </section>
+              `;
+            }
+
+            const itemsHtml = cat.items
+              .map((item) => {
+                const qty = cart[item.id]?.qty || 0;
+                return `
+                  <li class="flex items-center justify-between gap-3 py-3" id="menu-item-${item.id}">
+                    <div class="flex min-w-0 items-center gap-3">
+                      <span class="shrink-0 rounded-lg bg-sky-500/15 px-2.5 py-1 text-sm font-bold text-sky-300 ring-1 ring-inset ring-sky-500/30">
+                        ${item.price}
+                      </span>
+                      <div class="min-w-0">
+                        <p class="truncate text-sm font-semibold text-slate-100 sm:text-[15px]">
+                          ${item.name}
+                        </p>
+                        ${item.note ? `<p class="mt-0.5 truncate text-xs text-slate-400">${item.note}</p>` : ""}
+                      </div>
+                    </div>
+                    <div id="item-control-${item.id}">
+                      ${renderItemControl(item.id, item.name, item.price, qty)}
+                    </div>
+                  </li>
+                `;
+              })
+              .join("");
+
+            return `
+              <section id="${cat.id}" class="scroll-mt-32 rounded-2xl border border-sky-500/20 bg-[#071326]/80 shadow-lg shadow-black/30">
+                <div class="flex items-center justify-between gap-2 rounded-t-2xl bg-gradient-to-l from-sky-600/30 to-sky-900/10 px-4 py-3">
+                  <h3 class="text-base font-extrabold text-white sm:text-lg">${cat.title}</h3>
+                  <span class="flex h-7 w-9 items-center justify-center rounded-md bg-sky-500/20 text-xs font-bold text-sky-300 ring-1 ring-inset ring-sky-500/40">${cat.number}</span>
+                </div>
+                <ul class="divide-y divide-sky-500/10 px-3 pb-2 sm:px-4">
+                  ${itemsHtml}
+                </ul>
+                ${
+                  cat.footerNote
+                    ? `<p class="mx-3 mb-4 rounded-lg bg-sky-500/10 px-3 py-2 text-center text-xs font-semibold text-sky-300 sm:mx-4">${cat.footerNote}</p>`
+                    : ""
+                }
+              </section>
+            `;
+          })
+          .join("");
+      }
+
+      function renderItemControl(id, name, price, qty) {
+        if (qty === 0) {
+          return `
+            <button
+              onclick="addToCart('${id}', '${escapeAttr(name)}', ${price})"
+              class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-sky-500 text-lg font-bold text-[#021022] transition hover:scale-110 hover:bg-sky-400 active:scale-95"
+              aria-label="أضف ${name}"
+            >
+              +
+            </button>
+          `;
+        }
+        return `
+          <div class="flex shrink-0 items-center gap-2 rounded-full border border-sky-500/40 bg-sky-950/60 px-1.5 py-1">
+            <button
+              onclick="decreaseItem('${id}')"
+              class="flex h-6 w-6 items-center justify-center rounded-full bg-sky-500/20 text-sm font-bold text-sky-200 hover:bg-sky-500/40 active:scale-95"
+            >
+              −
+            </button>
+            <span class="w-4 text-center text-sm font-bold text-white">${qty}</span>
+            <button
+              onclick="increaseItem('${id}')"
+              class="flex h-6 w-6 items-center justify-center rounded-full bg-sky-500/20 text-sm font-bold text-sky-200 hover:bg-sky-500/40 active:scale-95"
+            >
+              +
+            </button>
+          </div>
+        `;
+      }
+
+      function updateItemControlInMenu(id) {
+        const wrapper = document.getElementById(`item-control-${id}`);
+        if (!wrapper) return;
+        const itemObj = findMenuItem(id);
+        if (!itemObj) return;
+        const qty = cart[id]?.qty || 0;
+        wrapper.innerHTML = renderItemControl(id, itemObj.name, itemObj.price, qty);
+      }
+
+      function findMenuItem(id) {
+        for (const cat of menuData) {
+          const it = cat.items.find((x) => x.id === id);
+          if (it) return it;
+        }
+        return null;
+      }
+
+      function addToCart(id, name, price) {
+        if (cart[id]) {
+          cart[id].qty++;
+        } else {
+          cart[id] = { name, price, qty: 1 };
+        }
+        updateItemControlInMenu(id);
+        updateFloatingCart();
+        renderDrawer();
+      }
+
+      function increaseItem(id) {
+        if (cart[id]) {
+          cart[id].qty++;
+          updateItemControlInMenu(id);
+          updateFloatingCart();
+          renderDrawer();
+        }
+      }
+
+      function decreaseItem(id) {
+        if (!cart[id]) return;
+        if (cart[id].qty <= 1) {
+          delete cart[id];
+        } else {
+          cart[id].qty--;
+        }
+        updateItemControlInMenu(id);
+        updateFloatingCart();
+        renderDrawer();
+      }
+
+      function removeItem(id) {
+        if (cart[id]) {
+          delete cart[id];
+          updateItemControlInMenu(id);
+          updateFloatingCart();
+          renderDrawer();
+        }
+      }
+
+      function getCartSummary() {
+        const lines = Object.entries(cart).map(([id, v]) => ({
+          id,
+          name: v.name,
+          price: v.price,
+          qty: v.qty,
+        }));
+        const totalCount = lines.reduce((s, l) => s + l.qty, 0);
+        const totalPrice = lines.reduce((s, l) => s + l.qty * l.price, 0);
+        return { lines, totalCount, totalPrice };
+      }
+
+      function updateFloatingCart() {
+        const { totalCount, totalPrice } = getCartSummary();
+        const btn = document.getElementById("floatingCartBtn");
+        const countSpan = document.getElementById("floatingCartCount");
+        const totalSpan = document.getElementById("floatingCartTotal");
+
+        if (totalCount > 0) {
+          btn.classList.remove("hidden");
+          btn.classList.add("flex");
+          countSpan.textContent = totalCount;
+          totalSpan.textContent = `${totalPrice} جنيه`;
+        } else {
+          btn.classList.add("hidden");
+          btn.classList.remove("flex");
+        }
+      }
+
+      function openCartDrawer() {
+        document.getElementById("cartDrawer").classList.remove("hidden");
+        document.getElementById("cartDrawer").classList.add("flex");
+        renderDrawer();
+      }
+
+      function closeCartDrawer() {
+        document.getElementById("cartDrawer").classList.add("hidden");
+        document.getElementById("cartDrawer").classList.remove("flex");
+        setTimeout(() => {
+          drawerStep = "cart";
+          checkoutErrors = {};
+        }, 300);
+      }
+
+      function renderDrawer() {
+        const titleEl = document.getElementById("drawerTitle");
+        const bodyEl = document.getElementById("drawerBody");
+        const footerEl = document.getElementById("drawerFooter");
+        const { lines, totalPrice } = getCartSummary();
+
+        if (drawerStep === "cart") {
+          titleEl.textContent = "🛒 سلة الطلبات";
+          if (lines.length === 0) {
+            bodyEl.innerHTML = `
+              <div class="mt-16 text-center text-slate-400">
+                <p class="text-5xl">👻</p>
+                <p class="mt-3">السلة فاضية... اختار أكلك الحلو من المنيو!</p>
+              </div>
+            `;
+            footerEl.innerHTML = `
+              <div class="mb-3 flex items-center justify-between text-sm font-bold text-slate-200">
+                <span>الإجمالي</span>
+                <span class="text-lg text-sky-300">0 جنيه</span>
+              </div>
+              <button disabled class="w-full rounded-full bg-sky-500 py-3 text-sm font-extrabold text-[#021022] opacity-40 cursor-not-allowed">
+                متابعة الطلب
+              </button>
+            `;
+          } else {
+            bodyEl.innerHTML = `
+              <ul class="space-y-3">
+                ${lines
+                  .map(
+                    (line) => `
+                  <li class="flex items-center justify-between gap-2 rounded-xl border border-sky-500/15 bg-sky-950/40 px-3 py-3">
+                    <div class="min-w-0">
+                      <p class="truncate text-sm font-bold text-white">${line.name}</p>
+                      <p class="text-xs text-sky-400">${line.price} جنيه × ${line.qty} = ${line.price * line.qty} جنيه</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <div class="flex items-center gap-1.5 rounded-full border border-sky-500/40 bg-sky-950/60 px-1.5 py-1">
+                        <button onclick="decreaseItem('${line.id}')" class="flex h-6 w-6 items-center justify-center rounded-full bg-sky-500/20 text-sm font-bold text-sky-200 hover:bg-sky-500/40 active:scale-95">−</button>
+                        <span class="w-4 text-center text-sm font-bold text-white">${line.qty}</span>
+                        <button onclick="increaseItem('${line.id}')" class="flex h-6 w-6 items-center justify-center rounded-full bg-sky-500/20 text-sm font-bold text-sky-200 hover:bg-sky-500/40 active:scale-95">+</button>
+                      </div>
+                      <button onclick="removeItem('${line.id}')" class="text-xs font-bold text-red-400 hover:text-red-300 transition">حذف</button>
+                    </div>
+                  </li>
+                `
+                  )
+                  .join("")}
+              </ul>
+            `;
+            footerEl.innerHTML = `
+              <div class="mb-3 flex items-center justify-between text-sm font-bold text-slate-200">
+                <span>الإجمالي</span>
+                <span class="text-lg text-sky-300">${totalPrice} جنيه</span>
+              </div>
+              <button onclick="proceedToCheckout()" class="w-full rounded-full bg-sky-500 py-3 text-sm font-extrabold text-[#021022] transition hover:bg-sky-400 active:scale-95">
+                متابعة الطلب
+              </button>
+            `;
+          }
+        } else if (drawerStep === "checkout") {
+          titleEl.textContent = "📋 بيانات التوصيل";
+          bodyEl.innerHTML = `
+            <div class="space-y-4">
+              <div>
+                <label class="mb-1 block text-xs font-bold text-sky-300">الاسم بالكامل</label>
+                <input
+                  id="checkoutName"
+                  type="text"
+                  value="${escapeAttr(checkoutData.name)}"
+                  oninput="checkoutData.name = this.value"
+                  placeholder="مثال: محمد أحمد"
+                  class="w-full rounded-lg border ${checkoutErrors.name ? 'border-red-500' : 'border-sky-500/30'} bg-sky-950/40 px-3 py-2 text-sm text-white placeholder:text-slate-500 focus:border-sky-400 focus:outline-none"
+                />
+                ${checkoutErrors.name ? `<p class="mt-1 text-xs text-red-400">${checkoutErrors.name}</p>` : ''}
+              </div>
+
+              <div>
+                <label class="mb-1 block text-xs font-bold text-sky-300">رقم الموبايل</label>
+                <input
+                  id="checkoutPhone"
+                  type="tel"
+                  dir="ltr"
+                  value="${escapeAttr(checkoutData.phone)}"
+                  oninput="checkoutData.phone = this.value"
+                  placeholder="01xxxxxxxxx"
+                  class="w-full rounded-lg border ${checkoutErrors.phone ? 'border-red-500' : 'border-sky-500/30'} bg-sky-950/40 px-3 py-2 text-sm text-white placeholder:text-slate-500 focus:border-sky-400 focus:outline-none text-right"
+                />
+                ${checkoutErrors.phone ? `<p class="mt-1 text-xs text-red-400">${checkoutErrors.phone}</p>` : ''}
+              </div>
+
+              <div>
+                <label class="mb-1 block text-xs font-bold text-sky-300">العنوان بالتفصيل</label>
+                <textarea
+                  id="checkoutAddress"
+                  rows="2"
+                  oninput="checkoutData.address = this.value"
+                  placeholder="المنطقة - الشارع - رقم العمارة - علامة مميزة"
+                  class="w-full resize-none rounded-lg border ${checkoutErrors.address ? 'border-red-500' : 'border-sky-500/30'} bg-sky-950/40 px-3 py-2 text-sm text-white placeholder:text-slate-500 focus:border-sky-400 focus:outline-none"
+                >${escapeAttr(checkoutData.address)}</textarea>
+                ${checkoutErrors.address ? `<p class="mt-1 text-xs text-red-400">${checkoutErrors.address}</p>` : ''}
+              </div>
+
+              <div>
+                <label class="mb-1 block text-xs font-bold text-sky-300">ملاحظات إضافية (اختياري)</label>
+                <textarea
+                  id="checkoutNotes"
+                  rows="2"
+                  oninput="checkoutData.notes = this.value"
+                  placeholder="مثلاً: من غير بصل، صوص زيادة..."
+                  class="w-full resize-none rounded-lg border border-sky-500/30 bg-sky-950/40 px-3 py-2 text-sm text-white placeholder:text-slate-500 focus:border-sky-400 focus:outline-none"
+                >${escapeAttr(checkoutData.notes)}</textarea>
+              </div>
+
+              <div class="rounded-xl border border-sky-500/20 bg-sky-950/40 p-4">
+                <p class="mb-2 text-sm font-bold text-sky-300">ملخص الطلب</p>
+                <ul class="space-y-1 text-xs text-slate-300">
+                  ${lines
+                    .map(
+                      (l) => `
+                    <li class="flex justify-between">
+                      <span>${l.name} × ${l.qty}</span>
+                      <span>${l.price * l.qty} جنيه</span>
+                    </li>
+                  `
+                    )
+                    .join("")}
+                </ul>
+                <div class="mt-2 flex justify-between border-t border-sky-500/20 pt-2 text-sm font-extrabold text-white">
+                  <span>الإجمالي</span>
+                  <span>${totalPrice} جنيه</span>
+                </div>
+              </div>
+            </div>
+          `;
+
+          footerEl.innerHTML = `
+            <div class="mb-3 flex items-center justify-between text-sm font-bold text-slate-200">
+              <span>الإجمالي</span>
+              <span class="text-lg text-sky-300">${totalPrice} جنيه</span>
+            </div>
+            <div class="flex gap-2">
+              <button onclick="backToCart()" class="w-1/3 rounded-full border border-sky-500/40 py-3 text-sm font-bold text-sky-200 hover:bg-sky-500/10 transition">
+                رجوع
+              </button>
+              <button onclick="submitOrder()" class="flex w-2/3 items-center justify-center gap-2 rounded-full bg-green-500 py-3 text-sm font-extrabold text-[#02230f] transition hover:bg-green-400 active:scale-95">
+                تأكيد وإرسال عبر واتساب
+              </button>
+            </div>
+          `;
+        } else if (drawerStep === "done") {
+          titleEl.textContent = "✅ تم إرسال الطلب";
+          bodyEl.innerHTML = `
+            <div class="mt-10 flex flex-col items-center gap-3 text-center">
+              <p class="text-6xl">👻✅</p>
+              <p class="text-lg font-bold text-white">تم فتح واتساب لإرسال طلبك!</p>
+              <p class="text-sm text-slate-400">
+                لو الواتساب ما اتفتحش تلقائي، تواصل معانا على الرقم
+                <a href="tel:01001254381" dir="ltr" class="font-bold text-sky-300">01001254381</a>
+              </p>
+            </div>
+          `;
+          footerEl.innerHTML = `
+            <button onclick="closeCartDrawer()" class="w-full rounded-full bg-sky-500 py-3 text-sm font-extrabold text-[#021022] hover:bg-sky-400">
+              إغلاق
+            </button>
+          `;
+        }
+      }
+
+      function proceedToCheckout() {
+        drawerStep = "checkout";
+        renderDrawer();
+      }
+
+      function backToCart() {
+        drawerStep = "cart";
+        renderDrawer();
+      }
+
+      function validateCheckout() {
+        const errs = {};
+        if (!checkoutData.name.trim()) errs.name = "من فضلك اكتب اسمك";
+        const cleanPhone = checkoutData.phone.replace(/\\s/g, "");
+        if (!cleanPhone.trim()) {
+          errs.phone = "من فضلك اكتب رقم الموبايل";
+        } else if (!/^0?1[0-9]{9,10}$/.test(cleanPhone)) {
+          errs.phone = "رقم الموبايل غير صحيح";
+        }
+        if (!checkoutData.address.trim()) errs.address = "من فضلك اكتب العنوان بالتفصيل";
+        checkoutErrors = errs;
+        return Object.keys(errs).length === 0;
+      }
+
+      function submitOrder() {
+        if (!validateCheckout()) {
+          renderDrawer();
+          return;
+        }
+
+        const { lines, totalPrice } = getCartSummary();
+        const itemsText = lines
+          .map((l, i) => `${i + 1}. ${l.name} × ${l.qty} = ${l.price * l.qty} جنيه`)
+          .join("\\n");
+
+        const message = `مرحباً مطعم كاسبر 👻🍽️ عايز أطلب:
+
+${itemsText}
+
+💰 إجمالي الطلب: ${totalPrice} جنيه
+
+👤 الاسم: ${checkoutData.name}
+📱 رقم الموبايل: ${checkoutData.phone}
+📍 العنوان بالتفصيل: ${checkoutData.address}
+${checkoutData.notes.trim() ? `📝 ملاحظات: ${checkoutData.notes}` : ""}
+
+من فضلكم أكدوا الطلب 🙏`;
+
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+        window.open(url, "_blank");
+
+        // Clear cart
+        cart = {};
+        menuData.forEach((cat) => {
+          cat.items.forEach((item) => updateItemControlInMenu(item.id));
+        });
+        updateFloatingCart();
+
+        drawerStep = "done";
+        renderDrawer();
+      }
+
+      function escapeAttr(str) {
+        if (!str) return "";
+        return String(str)
+          .replace(/&/g, "&amp;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+      }
+    </script>
+  </body>
+</html>
